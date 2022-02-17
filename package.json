@@ -10,11 +10,12 @@
     "osd": "node ../../scripts/osd",
     "es": "node ../../scripts/es",
     "lint": "../../node_modules/.bin/eslint .",
-    "start": "cd ../.. && node scripts/opensearch_dashboards --dev",
     "test:server": "../../node_modules/.bin/plugin-helpers test:server",
     "test:browser": "../../node_modules/.bin/plugin-helpers test:browser",
-    "build": "../../node_modules/.bin/plugin-helpers build",
-    "compile": "rm -rf ./target && node ../../scripts/build_opensearch_dashboards_platform_plugins.js --scan-dir ."
+    "compile": "rm -rf ./target && node ../../scripts/build_opensearch_dashboards_platform_plugins.js --scan-dir .",
+    "start": "yarn plugin_helpers start",
+    "build": "yarn plugin_helpers build",
+    "plugin_helpers": "node ../../scripts/plugin_helpers"
   },
   "dependencies": {
     "expr-eval": "2.0.2"
